@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <meta charset="utf-8">
+        <link href="./stylereg.css" rel="stylesheet" type="text/css">        
+    </head>
+    <body>
+
+        <header class="header-container">
+            <h1>Cochin Bakers </h1>
+            <nav>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html">Events</a></li>
+                <li><a href="#">Register</a></li>
+            </nav>
+        </header>
+        <div id="form">
+        <p>REGISTRATION FORM</p>
+
+        
+        <form id="form1">
+            <label for="fname" value="fname">FirstName:</label>
+            <input type="text" id="fname" name="fname"  required placeholder="Enter your First Names" onfocus="changebg()">
+            <br><br>
+            <label for="lname" value="lname">LastName:</label>
+            <input type="text" id="lname" name="lname" required placeholder="Enter your Last Name">
+            <br><br>            
+            <label for ="email" value="email">Email:</label>
+            <input type="email" name = "email" required placeholder="Enter your Email Address">
+            <br><br>
+            <label for="password" value="password">Password:</label>
+            <input type="password" name="password" required placeholder="Enter your Password">
+            <br><br>
+            <label for="password" value="password">Confirm Password:</label>
+            <input type="password" name="password" required placeholder="Confirm Password">
+            <br><br>
+            <label for="phone" value="phone">Phone Number:</label>
+            <input type="tel" name="phone" required >
+            <br><br>
+            <label for="webaddress" value="webaddress">Web Address:</label>
+            <input type="url" pattern="http://" name="webaddress">
+            <br><br>
+            <label for="age" value="age">Age</label>
+            <input type="number" size="6" min="12" max="99" value="21">
+            <br><br>
+            <label for="rate" value="rate">Rating your Experience</label>
+            <input type="range" size="2" min="1" max="10" value="6">            
+            <br><br>
+            <button type="submit" onclick="success ()">Register</button>
+        </form>
+        </div>
+
+        <div id="message"></div>
+        <script>
+            function changebg()
+            {
+                document.getElementById('form1').attributes('style','color:yellowgreen');
+            }
+
+            function success()
+            {
+                var name = document.getElementById('lname').value;
+                document.getElementById('message').innerHTML = `Hi ${name}, <br> You completed the registration process successfully!`
+            }
+        </script>
+
+        
+    </body>
+</html>

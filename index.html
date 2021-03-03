@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cochin Bakers Club</title>
+        <meta charset="utf-8">       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link href="style.css" rel = "stylesheet" type="text/css">
+    </head>
+    <body>
+        <header class="header-container">
+            <h1>Cochin Bakers </h1>
+            <nav>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="./registration.html">Register</a></li>
+            </nav>
+        </header>
+
+        <main>
+            <div class="mission-container">
+                <div id="missionImage">
+                    <img src="./images/cooking-time-banner.jpg" alt="cooking banner">
+                </div>
+                <div class="quote">
+                    <p><quote>"Cooking and Baking is both Physical & Mental Theraphy"</quote></p>
+                    <p><em>by <strong>Mary Berry</strong></em></p>
+                </div>
+            </div>
+
+            <!-- gallery section -->
+
+            <h2>COCHIN BAKERS</h2>
+            <h4>Some of our past baking boxes!</h4>
+            <p> Our Baking Club members get access to all 
+            our previous recipe cards with all the ingredient amounts and step by 
+            step instructions so they can bake them over and over again. As a bonus 
+            also get access to our Bread Club recipes, which you can see here.
+             </p>
+
+              
+
+            <div class="gallery-container galleryImages">
+                               
+                <div class="galleryImage">
+                    <img src="./images/anniversary-baking.jpg" alt="Bake Art">                    
+                </div>
+                <div class="galleryImage">
+                    <img src="./images/valentine-baking.jpg" alt="Bake Art">                    
+                </div>                
+                <div class="galleryImage">
+                    <img src="./images/macron-baking.jpg" alt="Bake Art">                    
+                </div>  
+                <div class="galleryImage">
+                    <img src="./images/special-baking.jpg" alt="Bake Art">                    
+                </div>
+                           
+             </div>
+
+
+             <!-- workshop section -->
+
+             <h2>HOW IT WORKS</h2>
+             <div class = "workshop-container steps">
+                 <div class = "step">
+                     <img src="./images/choose-plan.png" alt="">
+                     <h3>Choose your plan</h3>
+                     <p>Pick one of the workshop plan from the below workshops provided whether you 
+                         would like to participate in the workshop by physiaclly and based
+                          on your experience in the baking art. 
+                     </p>
+                 </div>
+                 <div class="step">
+                    <img src="./images/baking-box.jpg" alt="">
+                    <h3>Get your Box</h3>
+                    <p> When you register with us for your workshop please feel free to come
+                         to the baking world with a lot of intrest.. and all your ewquired supporting
+                         products, machines and supporting members will be here for welcoming all of you!                       
+                    </p>
+                 </div>
+                 <div class="step">
+                    <img src="./images/timeto-bake.jpg" alt="">
+                    <h3>Bake and Enjoy</h3>
+                    <p> Add the fresh ingredients, follow the easy-step recipe card and
+                        the baking from scratch experience with a little less fuss and no waste!        
+                    </p>
+                 </div>
+
+
+             </div>
+             <h2 id="events">CHOOSE YOUR PLAN </h2>
+
+             <div class="plan-container subscription">
+                 <div class="plan" >
+                     <h3>For Junior Bakers</h3><br>
+                     <img src="./images/juniors.jpg" alt="Junior Bakers">
+                     <p>Location: Cochin</p>
+                     <p>Date: April 25<sup>th</sup> - 29<sup>th</sup></p>
+                     <p>Price: 69&#163;</p>
+                     <p><a href="./registration.html"><button type="button" id="register">Register</button></a></p>
+                 </div>
+                 <div class="plan">
+                    <h3>For Beginner Bakers</h3><br>
+                    <img src="./images/juniors.jpg" alt="Junior Bakers">
+                    <p>Location: Cochin</p>
+                    <p>Date: April 14<sup>th</sup> - 18<sup>th</sup></p>
+                    <p>Price: 89&#163;</p>
+                    <p><a href="./registration.html"><button type="button" id="register">Register</button></a></p>
+                </div>
+                <div class="plan">
+                    <h3>For Experienced Bakers</h3><br>
+                    <img src="./images/juniors.jpg" alt="Junior Bakers">
+                    <p>Location: Cochin</p>
+                    <p>Date: May 3<sup>rd</sup> - 7<sup>th</sup></p>
+                    <p>Price: 99&#163;</p>                   
+                    <p><a href="./registration.html"><button type="submit" id="register" >Register</button></a></p>
+                </div>
+             </div>
+
+             <!-- newsletter section -->
+
+             <div class = "newsletter">
+                 <h2>LOVE BAKING?</h2>
+                 <P>Join our mailing list and be the first to hear about our special offers and new recipes</P>
+                 <form action="response.html" method="POST" id="subscribe-form">
+                    <input type="text" name="fname" id="fname" placeholder="First Name" required/>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" required/>
+                    <input type="text" name="date" id="date" placeholder="Tell us your birthday.. (DD/MM/YYYY)" required/>
+                    <input type="email" name="email" id="email" placeholder="Enter your email address..." required/>
+                    <button type="button" id="subscribe" onclick="response ()">SUBSCRIBE</button>
+                    <div></div>
+                    <div id="response"></div>
+                </form>
+                
+             </div>
+
+             <!-- footer section -->
+
+             <footer>
+                 <p>Copy Right @2021 Cochin Bakers Club</p>
+             </footer>
+
+        </main>
+
+        <script>
+            function response()
+            {
+                var name = document.getElementById('lname').value;
+                document.getElementById('response').innerHTML =  `Hi ${name}, Thank you for subscribing!`;
+            }
+
+        </script>
+
+
+
+        
+    </body>
+</html>
